@@ -1,0 +1,11 @@
+#secondary{
+    display: none;
+}
+
+#primary-inner{
+    border-bottom: 0;
+}
+
+ytd-comments#comments{
+    display: none;
+}
