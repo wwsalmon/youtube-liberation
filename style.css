@@ -2,10 +2,54 @@
     display: none;
 }
 
+.ytd-browse[page-subtype=home] ytd-section-list-renderer#primary{
+    display: none;
+}
+
 #primary-inner{
     border-bottom: 0;
 }
 
 ytd-comments#comments{
     display: none;
+}
+
+.ytl-container{
+    max-width: 800px;
+    margin: 64px auto;
+    width: 100%;
+}
+
+.ytl-container h1{
+    font-weight: 300;
+    font-size: 42px;
+}
+
+.ytd-grid-renderer#items{
+    flex-direction: column!important;
+}
+
+ytd-grid-video-renderer.ytd-grid-renderer{
+    width: 800px!important;
+}
+
+/*
+
+.ytd-grid-video-renderer#dismissable{
+    display: flex;
+}
+
+.ytd-grid-video-renderer#meta h3 a#video-title{
+    font-size: 26px;
+    line-height: 1.1;
+}
+
+*/
+
+#buttons ytd-topbar-menu-button-renderer.ytd-masthead:nth-of-type(2){
+    display: none!important;
+}
+
+#buttons ytd-notification-topbar-button-renderer.ytd-masthead{
+    display: none!important;
 }
