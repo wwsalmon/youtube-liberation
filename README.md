@@ -1,6 +1,18 @@
 # YouTube Liberation
 A chrome extension to liberate you from the infinite distraction cycle of YouTube.
 
+## How to use
+
+Eventually this extension will be published on the Chrome Web Store. In the meantime, here's how you can try it out:
+
+1. Download the entire repository as a zip file (on GitHub: Clone or download), then extract the zip file to a folder.
+2. In Chrome, go to `chrome://extensions`.
+3. In the top right corner, make sure "Developer Mode" is on.
+4. In the bar that shows up, click "Load unpacked" and select the repository folder you downloaded.
+5. After confirming everything, a "Y" icon should show up in your extensions tray. If you go to YouTube.com you will be greeted with a newly liberated layout.
+
+You'll have to manually download the new files every time there's an update through GitHub, and Developer Mode extensions will trigger some potentially annoying messages in Chrome, so it's not an ideal method, but can be used for testing.
+
 ## Philosophy
 
 Like other social media platforms, YouTube is very good at showing you content that you want to watch but weren't planning to or looking for, making it super easy to get distracted and get sucked into one video after another and suddenly lose an hour of your day. Yet there are so many valuable resources and videos that you can't find elsewhere: tutorials, event coverage, specific creators you subscribe to who you know always publish high-quality content worth watching. For many of us, the value of YouTube makes it worth the sacrifice of even its most distracting possibilities, and it's impossible to just cut away.
