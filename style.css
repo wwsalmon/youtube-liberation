@@ -173,3 +173,9 @@ button#avatar-btn yt-img-shadow, button#avatar-btn .yt-img-shadow{
     font-weight: 400;
     text-decoration: none;
 }
+
+/* PLAYLIST PAGE */
+
+ytd-playlist-sidebar-renderer{
+    left: 0!important;
+}

@@ -33,7 +33,14 @@ $(window).on('load', function () {
         </div>
     `);
 
-    if ($("ytd-playlist-panel-renderer").length){
-        $("ytd-playlist-panel-renderer").appendTo("#primary-inner");
+    if ($("ytd-app[is-watch-page]").length){
+        console.log("test");
+        while ($("#secondary #panels").length == 0){}
+        console.log("test2");
+        if ($("ytd-playlist-panel-renderer").length) {
+            $("ytd-playlist-panel-renderer").appendTo("#primary-inner");
+        }
     }
+
+    
 });
