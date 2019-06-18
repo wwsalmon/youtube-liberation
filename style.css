@@ -24,11 +24,58 @@ ytd-page-manager.ytd-app{
     max-width: 800px;
     margin: 64px auto;
     width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .ytl-container h1{
     font-weight: 300;
     font-size: 42px;
+}
+
+.ytl-container h3{
+    color: rgba(0,0,0,0.4);
+}
+
+.ytl-container p{
+    margin: 32px 0;
+    color: rgba(0,0,0,0.6);
+}
+
+.ytl-home-grid{
+    display: inline-flex;
+    margin-top: 32px;
+    flex-flow: row nowrap;
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+.ytl-home-grid a{
+    flex: 0 0 33.3%;
+}
+
+.ytl-home-grid-item{
+    padding: 24px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ytl-home-grid-item:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.ytl-home-grid-item-text{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.4);
+    white-space: nowrap;
+    margin-top: 8px;
+}
+
+.ytl-home-grid-item-icon{
+    width: 24px;
+    opacity: 0.4;
 }
 
 /* WATCH PAGE */
