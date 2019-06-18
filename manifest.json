@@ -6,7 +6,7 @@
     "content_scripts": [
         {
             "css": ["style.css"],
-            "js": ["jquery-3.4.0.slim.min.js", "content.js"],
+            "js": ["jquery-3.4.1.min.js", "content.js"],
             "matches": ["https://www.youtube.com/*"]
         }
     ]
