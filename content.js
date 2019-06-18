@@ -27,7 +27,13 @@ $(window).on('load', function () {
                 <a href='https://www.youtube.com/feed/subscriptions'><div class='ytl-nav-item'><span>Subscriptions</span></div></a>
                 <a href='https://www.youtube.com/feed/trending'><div class='ytl-nav-item'><span>Trending</span></div></a>
             </div>
-            <label for='ytl-nm'>Menu</label>
+            <label for='ytl-nm'><yt-icon icon="yt-icons:menu"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path>
+      </g></svg></yt-icon></label>
         </div>
     `);
+
+    if ($("ytd-playlist-panel-renderer").length){
+        $("ytd-playlist-panel-renderer").appendTo("#primary-inner");
+    }
 });

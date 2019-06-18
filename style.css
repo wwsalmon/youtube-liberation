@@ -56,9 +56,9 @@ ytd-page-manager.ytd-app{
     height: 100%!important;
 }
 
-.ytp-next-button.ytp-button{
+/* .ytp-next-button.ytp-button{
     display: none!important;
-}
+} */
 
 ytd-comments#comments{
     display: none;
@@ -105,6 +105,14 @@ ytd-searchbox[mode=legacy][has-focus] #container.ytd-searchbox, ytd-searchbox[mo
     box-shadow: none!important;
 }
 
+button#avatar-btn{
+    padding: 0!important;
+}
+
+button#avatar-btn yt-img-shadow, button#avatar-btn .yt-img-shadow{
+    margin: 0!important;
+}
+
 .ytl-nav{
     font-size: 14px;
     color: #888888;
@@ -117,6 +125,11 @@ ytd-searchbox[mode=legacy][has-focus] #container.ytd-searchbox, ytd-searchbox[mo
 .ytl-nav label{
     cursor: pointer;
     line-height: 56px;
+    opacity: 0.4;
+}
+
+.ytl-nav label:hover{
+    opacity: 0.9;
 }
 
 .ytl-nav input{
@@ -126,7 +139,7 @@ ytd-searchbox[mode=legacy][has-focus] #container.ytd-searchbox, ytd-searchbox[mo
 .ytl-nav-menu{
     position: fixed;
     top: 11px;
-    left: 72px;
+    left: 56px;
     z-index: 2051;
     visibility: hidden;
     display: flex;
@@ -139,8 +152,8 @@ ytd-searchbox[mode=legacy][has-focus] #container.ytd-searchbox, ytd-searchbox[mo
     visibility: visible;
 }
 
-.ytl-nav input:checked ~ .ytl-nav label{
-    color: #444444;
+.ytl-nav input:checked ~ label{
+    opacity: 0.7;
 }
 
 .ytl-nav-item{

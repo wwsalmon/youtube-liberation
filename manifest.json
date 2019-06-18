@@ -9,5 +9,8 @@
             "js": ["jquery-3.4.1.min.js", "content.js"],
             "matches": ["https://www.youtube.com/*"]
         }
-    ]
+    ],
+    "browser_action" : {
+        "default_popup" : "popup.html"
+    }
 }
