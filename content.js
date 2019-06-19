@@ -97,7 +97,7 @@ menuShow = false;
 
 $(document).on("click", function () {
     var target = $(event.target);
-    if (target.is("yt-icon")){
+    if (target.is(".ytl-nav yt-icon")){
         menuShow = !menuShow;
         $(".ytl-nav-menu").toggleClass("ytl-show");
     }
