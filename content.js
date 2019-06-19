@@ -69,7 +69,6 @@ $(window).on('load', function () {
     
     $(".ytd-masthead#container").prepend(`
         <div class='ytl-nav'>
-            <input type='checkbox' id='ytl-nm'>
             <div class='ytl-nav-menu'>
                 <a href='https://www.youtube.com/'><div class='ytl-nav-item'><span>Home</span></div></a>
                 <a href='https://www.youtube.com/feed/subscriptions'><div class='ytl-nav-item'><span>Subscriptions</span></div></a>
@@ -92,4 +91,20 @@ $(window).on('load', function () {
     }
 
     
+});
+
+menuShow = false;
+
+$(document).on("click", function () {
+    var target = $(event.target);
+    if (target.is("yt-icon")){
+        menuShow = !menuShow;
+        $(".ytl-nav-menu").toggleClass("ytl-show");
+    }
+    else{
+        if (menuShow){
+            menuShow = false;
+            $(".ytl-nav-menu").toggleClass("ytl-show");
+        }
+    }
 });
