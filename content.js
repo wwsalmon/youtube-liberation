@@ -11,10 +11,14 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
 
     <div class='ytl-home'>
         <div class='ytl-home-sidebar'>
+            <div class='ytl-sidebar-logo'><img src='` + chrome.runtime.getURL("icon-256.png") + `'></div>
+            <h3>YouTube Liberation</h3>
+            <p>Extension developed by <a href='https://www.wwsalmon.com/'>Samson Zhang</a>. More about this extension on the Chrome Web
+            Store or its <a href='https://github.com/wwsalmon/youtube-liberation'>GitHub Repo</a>.</p>
         </div>
         <div class='ytl-container'>
-            <h1>Welcome to YouTube</h1>
-            <h3>Stay focused!</h3>
+            <!-- <h1>Welcome to YouTube</h1>
+            <h3>Stay focused!</h3> -->
             <div class='ytl-home-grid'>
                 <a href='https://www.youtube.com/feed/subscriptions'><div class='ytl-home-grid-item'>
                         <div class='ytl-home-grid-item-icon'>
