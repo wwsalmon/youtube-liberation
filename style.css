@@ -24,12 +24,29 @@ ytd-page-manager.ytd-app{
     margin-left: 0!important;
 }
 
-.ytl-container{
-    max-width: 800px;
-    margin: 64px auto;
+.ytl-home{
     width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.ytl-home-sidebar{
+    width: 417px;
+    background-color: #fafafa;
+    flex: 0 0 417px;
+    min-height: calc(100vh - 56px);
+    padding: 24px 32px;
+}
+
+.ytl-home-sidebar, .ytl-container{
+    box-sizing: border-box;
+}
+
+.ytl-container{
     font-size: 16px;
     line-height: 1.5;
+    max-width: 880px;
+    padding: 24px 64px;
 }
 
 html[dark='true'] .ytl-container{
@@ -37,6 +54,7 @@ html[dark='true'] .ytl-container{
 }
 
 .ytl-container h1{
+    margin-top: 32px;
     font-weight: 300;
     font-size: 42px;
 }
@@ -50,8 +68,15 @@ html[dark='true'] .ytl-container{
 .ytl-container p{
     margin: 32px 0;
     color: rgba(0,0,0,0.6);
+    opacity: 0.5;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.ytl-container p:hover{
+    opacity: 1.0;
+    transition: opacity 0.2s ease;
 }
 
 .ytl-home-grid{
@@ -148,7 +173,7 @@ ytd-comments#comments{
     display: none!important;
 }
 
-yt-icon-button#guide-button, #buttons ytd-notification-topbar-button-renderer.ytd-masthead{
+ytd-mini-guide-renderer, yt-icon-button#guide-button, #buttons ytd-notification-topbar-button-renderer.ytd-masthead{
     display: none!important;
 }
 

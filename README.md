@@ -1,3 +1,5 @@
+![](ytl-icon.png)
+
 # YouTube Liberation
 A chrome extension to liberate you from the infinite distraction cycle of YouTube.
 

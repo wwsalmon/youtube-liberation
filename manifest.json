@@ -1,4 +1,9 @@
 {
+    "icons": {
+        "48": "icon-48.png",
+        "128": "icon-128.png",
+        "256": "icon-256.png"
+    },
     "manifest_version": 2,
     "name": "YouTube Liberation",
     "version": "0.0.1",
@@ -11,6 +16,11 @@
         }
     ],
     "browser_action" : {
-        "default_popup" : "popup.html"
+        "default_popup" : "popup.html",
+        "icons" : {
+            "48": "icon-48.png",
+            "128": "icon-128.png",
+            "256": "icon-256.png"
+        }
     }
 }
