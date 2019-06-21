@@ -207,6 +207,10 @@ html[dark='true'] .ytl-home-grid{
     height: 100%!important;
 }
 
+.html5-video-container video{
+    left: 0!important;
+}
+
 
 
 /* .ytp-next-button.ytp-button{

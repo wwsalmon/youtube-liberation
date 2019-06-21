@@ -17,8 +17,7 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
             Store or its <a href='https://github.com/wwsalmon/youtube-liberation'>GitHub Repo</a>.</p>
         </div>
         <div class='ytl-container'>
-            <!-- <h1>Welcome to YouTube</h1>
-            <h3>Stay focused!</h3> -->
+            <!-- <h1>Welcome to YouTube</h1> -->
             <div class='ytl-home-grid'>
                 <a href='https://www.youtube.com/feed/subscriptions'><div class='ytl-home-grid-item'>
                         <div class='ytl-home-grid-item-icon'>
@@ -57,7 +56,9 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
                     
                 </div></a>
             </div>
-            <p>Like other social media platforms, YouTube is very good at showing you content that you want to watch but weren't
+            <h3>Stay focused!</h3>
+            <p>YouTube Liberation aims to allow you to get the best of YouTube without being distracted by eliminating any suggestions for videos you weren't looking for. We encourage you to check up on your subscriptions or run a search; be conscious and seek out the content you want to see.</p> 
+            <!-- <p>Like other social media platforms, YouTube is very good at showing you content that you want to watch but weren't
                 planning to or looking for, making it super easy to get distracted and get sucked into one video after another and
                 suddenly lose an hour of your day. Yet there are so many valuable resources and videos that you can't find
                 elsewhere: tutorials, event coverage, specific creators you subscribe to who you know always publish high-quality
@@ -65,7 +66,7 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
                 distracting possibilities, and it's impossible to just cut away.</p>
             <p>What if it didn't have to be this way? What if you could have the good of YouTube, see the content you want to see, without the platform constantly trying to drag your attention through an endless stream of productivity-draining drudgery?</p>
             <p>This is the philosophy behind YouTube Liberation. It's time to rise up, lose your chains, and join us as we march our
-            way towards a better YouTube!</p>
+            way towards a better YouTube!</p> -->
         </div>
     </div>
     
@@ -73,7 +74,11 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
 }
 
 $(window).on('load', function () {
+    console.log("loaded");
+
     while ($(".ytd-masthead#container").length == 0){}
+
+    console.log("topbar found");
     
     $(".ytd-masthead#container").prepend(`
         <div class='ytl-nav'>
@@ -90,9 +95,9 @@ $(window).on('load', function () {
     `);
 
     if ($("ytd-app[is-watch-page]").length){
-        console.log("test");
+        console.log("watch page found");
         while ($("#secondary #panels").length == 0){}
-        console.log("test2");
+        console.log("secondary found");
         if ($("ytd-playlist-panel-renderer").length) {
             $("ytd-playlist-panel-renderer").appendTo("#primary-inner");
         }
