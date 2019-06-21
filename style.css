@@ -16,6 +16,10 @@ app-drawer#guide{
     display: none!important;
 }
 
+html:not([dark='true']) ytd-app{
+    background-color: #fff;
+}
+
 ytd-page-manager.ytd-app{
     margin-left: 0!important;
 }
@@ -28,18 +32,26 @@ ytd-page-manager.ytd-app{
     line-height: 1.5;
 }
 
+html[dark='true'] .ytl-container{
+    color: #fff;
+}
+
 .ytl-container h1{
     font-weight: 300;
     font-size: 42px;
 }
 
 .ytl-container h3{
+    font-size: 24px;
     color: rgba(0,0,0,0.4);
+    font-family: 'Roboto Mono';
 }
 
 .ytl-container p{
     margin: 32px 0;
     color: rgba(0,0,0,0.6);
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .ytl-home-grid{
@@ -63,6 +75,10 @@ ytd-page-manager.ytd-app{
     background-color: rgba(0,0,0,0.1);
 }
 
+html[dark='true'] .ytl-home-grid-item:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
 .ytl-home-grid-item-text{
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -71,6 +87,19 @@ ytd-page-manager.ytd-app{
     color: rgba(0,0,0,0.4);
     white-space: nowrap;
     margin-top: 8px;
+}
+
+html[dark='true'] .ytl-container p, html[dark='true'] .ytl-container h3, html[dark='true'] .ytl-home-grid-item-text{
+    color: rgba(255,255,255,0.8);
+}
+
+html[dark='true'] .ytl-home-grid-item-icon svg{
+    fill: #fff;
+}
+
+
+html[dark='true'] .ytl-home-grid{
+    border-color: rgba(255,255,255,0.2);
 }
 
 .ytl-home-grid-item-icon{
@@ -127,9 +156,9 @@ ytd-topbar-logo-renderer#logo{
     display: none!important;
 }
 
-ytd-searchbox#search{
+ytd-searchbox#search, #search-form.ytd-searchbox{
     display: block;
-    margin-left: 0;
+    margin-left: 0!important;
 }
 
 .ytd-searchbox#container{
@@ -137,6 +166,10 @@ ytd-searchbox#search{
     border-bottom: 1px solid #e5e5e5!important;
     box-shadow: none!important;
     padding-left: 0!important;
+}
+
+ytd-masthead[dark]{
+    background-color: #121212!important;
 }
 
 ytd-masthead[dark] .ytd-searchbox#container{
@@ -192,6 +225,10 @@ button#avatar-btn yt-img-shadow, button#avatar-btn .yt-img-shadow{
     padding: 8px 0;
 }
 
+ytd-masthead[dark] .ytl-nav-menu{
+    background-color: #242424;
+}
+
 .ytl-nav-menu.ytl-show{
     visibility: visible;
 }
@@ -210,12 +247,20 @@ button#avatar-btn yt-img-shadow, button#avatar-btn .yt-img-shadow{
     background-color: rgba(0,0,0,0.1);
 }
 
+ytd-masthead[dark] .ytl-nav-item:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
 .ytl-nav-item{
     color: rgb(10,10,10);
     text-transform: none;
     letter-spacing: 0;
     font-weight: 400;
     text-decoration: none;
+}
+
+ytd-masthead[dark] .ytl-nav-item{
+    color: #fff;
 }
 
 /* PLAYLIST PAGE */
