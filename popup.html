@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script src='jquery-3.4.1.min.js'></script>
         <title>YouTube Liberation</title>
         <style>
         body{
@@ -88,11 +89,16 @@
         <div class='options-container'>
             <h3>Options</h3>
             <form class='options'>
-                <label for='homepage'><input type='checkbox' id='homepage' name='homepaeg'></input>Show default homepage</label>
+                <label for='homepage'><input type='checkbox' id='homepage' name='homepage'></input>Show default homepage</label>
                 <label for='comments'><input type='checkbox' id='comments' name='comments'></input>Show comments on watch page</label>
                 <label for='recommended'><input type='checkbox' id='recommended' name='recommended'></input>Show recommendations on watch page</label>
+                <label for='notifications'><input type='checkbox' id='notifications' name='notifications'></input>Show notifications button</label>
+                <label for='messages'><input type='checkbox' id='messages' name='messages'></input>Show messages button</label>
+                <label for='upload'><input type='checkbox' id='upload' name='upload'></input>Show upload button</label>
                 <input type='submit' value='Save'></input>
             </form>
+            <div id='status'></div>
         </div>
+        <script src='popup.js'></script>
     </body>
 </html>
