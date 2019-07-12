@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script src='jquery-3.4.1.min.js'></script>
         <title>YouTube Liberation</title>
         <style>
         body{
-            margin: 16px;
+            margin: 0;
             min-width: 300px;
+            font-family: 'Roboto Mono';
         }
+
+        .top-container, .options-container{
+            padding: 16px;
+        }
+
+        .options-container{
+            background-color: #F32121;
+            color: #fff;
+        }
+
+        h3{
+            letter-spacing: 2px;
+        }
+
+        .divider{
+            margin-top: 32px;
+            width: 32px;
+            height: 2px;
+            background-color: #000;
+        }
+
+        .options label{
+            display: flex;
+            padding: 8px;
+            padding-left: 0;
+            user-select: none;
+        }
+
+        .options input{
+            margin-right: 8px;
+        }
+
+        .options label:hover{
+            background-color: rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+
+        a{
+            color: #F32121;
+            text-decoration: none;
+            border-bottom: 1px solid #F32121;
+        }
+
+        a:hover{
+            opacity: 0.6;
+        }
+
+        input[type=submit]{
+            background: none;
+            border: 1px solid #fff;
+            font-family: 'Roboto Mono';
+            color: #fff;
+            cursor: pointer;
+            padding: 6px;
+            margin-top: 16px;
+            position: relative;
+            left: 100%;
+            transform: translateX(-100%);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type=submit]:hover{
+            background-color: #fff;
+            color: #F32121;
+        }
+
         </style>
     </head>
     <body>
-        <img src='icon-256.png' style='width: 48px;'>
-        <h1>YouTube Liberation</h1>
-        <p>Free yourself from the chains of YouTube!</p>
-        <p>Extension developed by <a href='https://www.wwsalmon.com/'>Samson Zhang</a>. More about this extension on the <a href='https://chrome.google.com/webstore/detail/akmmhbokbfhghenajahbcmogcbghiamg'>Chrome Web Store</a> or on <a href='https://github.com/wwsalmon/youtube-liberation'>GitHub</a>. </p>
-        <!-- <h3>Options</h3> -->
-        <!-- <form>
-            <input type='checkbox' id='homepage' name='homepaeg'></input>
-            <label for='homepage'>Show default homepage</label>
-            <input type='checkbox' id='comments' name='comments'></input>
-            <label for='comments'>Show comments on watch page</label>
-            <input type='checkbox' id='recommended' name='recommended'></input>
-            <label for='recommended'>Show recommendations on watch page</label>
-        </form> -->
+        <div class='top-container'>
+            <img src='icon-256.png' style='width: 48px;'>
+            <h1>YouTube Liberation</h1>
+            <p>Free yourself from the chains of YouTube!</p>
+            <p>Extension developed by <a href='https://www.wwsalmon.com/'>Samson Zhang</a>. More about this extension on the <a href='https://chrome.google.com/webstore/detail/akmmhbokbfhghenajahbcmogcbghiamg'>Chrome Web Store</a> or on <a href='https://github.com/wwsalmon/youtube-liberation'>GitHub</a>. </p>
+        </div>
+        <div class='options-container'>
+            <h3>Options</h3>
+            <form class='options'>
+                <label for='homepage'><input type='checkbox' id='homepage' name='homepage'></input>Show default homepage</label>
+                <label for='comments'><input type='checkbox' id='comments' name='comments'></input>Show comments on watch page</label>
+                <label for='recommended'><input type='checkbox' id='recommended' name='recommended'></input>Show recommendations on watch page</label>
+                <label for='notifications'><input type='checkbox' id='notifications' name='notifications'></input>Show notifications button</label>
+                <label for='messages'><input type='checkbox' id='messages' name='messages'></input>Show messages button</label>
+                <label for='upload'><input type='checkbox' id='upload' name='upload'></input>Show upload button</label>
+                <input type='submit' value='Save'></input>
+            </form>
+            <div id='status'></div>
+        </div>
+        <script src='popup.js'></script>
     </body>
 </html>
