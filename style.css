@@ -8,8 +8,8 @@ a{
 /* HOMEPAGE */
 /* HOMEPAGE */
 
-.ytd-browse[page-subtype=home] ytd-section-list-renderer#primary{
-    display: none;
+.ytd-browse[page-subtype='home']{
+    display: none!important;
 }
 
 app-drawer#guide{
