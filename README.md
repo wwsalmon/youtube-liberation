@@ -5,15 +5,15 @@ A chrome extension to liberate you from the infinite distraction cycle of YouTub
 
 ## How to use
 
-Eventually this extension will be published on the Chrome Web Store. In the meantime, here's how you can try it out:
+[Download the extension on the Chrome Web Store](https://chrome.google.com/webstore/detail/youtube-liberation-anti-d/akmmhbokbfhghenajahbcmogcbghiamg). Alternatively, here's how to manually install the latest version from GitHub (which may be broken at any given time due to testing and WIP new features):
 
 1. Download the entire repository as a zip file (on GitHub: Clone or download), then extract the zip file to a folder.
 2. In Chrome, go to `chrome://extensions`.
 3. In the top right corner, make sure "Developer Mode" is on.
 4. In the bar that shows up, click "Load unpacked" and select the repository folder you downloaded.
-5. After confirming everything, a "Y" icon should show up in your extensions tray. If you go to YouTube.com you will be greeted with a newly liberated layout.
+5. After confirming everything, the YTL icon should show up in your extensions tray. If you go to YouTube.com you will be greeted with a newly liberated layout.
 
-You'll have to manually download the new files every time there's an update through GitHub, and Developer Mode extensions will trigger some potentially annoying messages in Chrome, so it's not an ideal method, but can be used for testing.
+You'll have to manually download the new files or Git pull every time there's an update through GitHub, and Developer Mode extensions will trigger some potentially annoying messages in Chrome, so it's not an ideal method, but can be used for testing if you really want.
 
 ## Philosophy
 
