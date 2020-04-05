@@ -17,7 +17,6 @@
         }
 
         .options-container{
-            display: none;
             background-color: #F32121;
             color: #fff;
         }
@@ -59,7 +58,7 @@
             opacity: 0.6;
         }
 
-        input[type=submit]{
+        input[type=button]{
             background: none;
             border: 1px solid #fff;
             font-family: 'Roboto Mono';
@@ -74,9 +73,15 @@
             letter-spacing: 1px;
         }
 
-        input[type=submit]:hover{
+        input[type=button]:hover{
             background-color: #fff;
             color: #F32121;
+        }
+
+        .status{
+            color: #fff;
+            text-align: center;
+            height: 20px;
         }
 
         </style>
@@ -97,9 +102,9 @@
                 <label for='notifications'><input type='checkbox' id='notifications' name='notifications'></input>Show notifications button</label>
                 <label for='messages'><input type='checkbox' id='messages' name='messages'></input>Show messages button</label>
                 <label for='upload'><input type='checkbox' id='upload' name='upload'></input>Show upload button</label>
-                <input type='submit' value='Save'></input>
+                <input type='button' id='options-save' value='Save'></input>
             </form>
-            <div id='status'></div>
+            <div class='status'><span id='status'></span></div>
         </div>
         <script src='popup.js'></script>
     </body>
