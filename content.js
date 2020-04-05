@@ -1,13 +1,7 @@
-if ($("ytd-expander").length){
-    if ($("ytd-expander")[0].hasAttribute("collapsed")) {
-        $("ytd-expander").removeAttr("collapsed");
-    }
-}
+var home = document.querySelector("ytd-browse.ytd-page-manager[page-subtype='home']");
 
-$("head").append('<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">');
-
-if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
-    $("ytd-browse.ytd-page-manager[page-subtype='home']").prepend(`
+if (home != null){
+    home.innerHTML = `
 
     <div class='ytl-home'>
         <div class='ytl-home-sidebar'>
@@ -70,17 +64,26 @@ if ($("ytd-browse.ytd-page-manager[page-subtype='home']").length){
         </div>
     </div>
     
-    `);
+    `;
 }
 
-$(window).on('load', function () {
-    console.log("loaded");
+var navbar = document.querySelector(".ytd-masthead#container");
 
-    while ($(".ytd-masthead#container").length == 0){}
+if (navbar != null){
+    insertNavbar(navbar);
+}
+else{
+    document.arrive(".ytd-masthead#container", function () {
+        insertNavbar();
+    })
+}
 
-    console.log("topbar found");
+function insertNavbar(currNavbar = null){
+    if (currNavbar == null){
+        currNavbar = document.querySelector(".ytd-masthead#container");
+    }
     
-    $(".ytd-masthead#container").prepend(`
+    currNavbar.insertAdjacentHTML("afterbegin", `
         <div class='ytl-nav'>
             <div class='ytl-nav-menu'>
                 <a href='https://www.youtube.com/'><div class='ytl-nav-item'><span>Home</span></div></a>
@@ -94,31 +97,18 @@ $(window).on('load', function () {
       </g></svg></yt-icon></label>
         </div>
     `);
-
-    if ($("ytd-app[is-watch-page]").length){
-        console.log("watch page found");
-        while ($("#secondary #panels").length == 0){}
-        console.log("secondary found");
-        if ($("ytd-playlist-panel-renderer").length) {
-            $("ytd-playlist-panel-renderer").appendTo("#primary-inner");
-        }
-    }
-
-    
-});
+}
 
 menuShow = false;
 
-$(document).on("click", function () {
-    var target = $(event.target);
-    if (target.is(".ytl-nav yt-icon")){
+document.addEventListener("click", function(el){
+    icon = document.querySelector(".ytl-nav yt-icon");
+    if (el.target == icon){
         menuShow = !menuShow;
-        $(".ytl-nav-menu").toggleClass("ytl-show");
+        document.querySelector(".ytl-nav-menu").classList.toggle("ytl-show");
     }
-    else{
-        if (menuShow){
-            menuShow = false;
-            $(".ytl-nav-menu").toggleClass("ytl-show");
-        }
+    else if (menuShow){
+        menuShow = false;
+        document.querySelector(".ytl-nav-menu").classList.remove("ytl-show");
     }
-});
+})
