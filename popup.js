@@ -1,5 +1,4 @@
 function save_options() {
-    homepage = document.getElementById('homepage').checked;
     comments = document.getElementById('comments').checked;
     recommended = document.getElementById('recommended').checked;
     notifications = document.getElementById('notifications').checked;
@@ -7,7 +6,6 @@ function save_options() {
     upload = document.getElementById('upload').checked;
 
     chrome.storage.sync.set({
-        homepage: homepage,
         comments: comments,
         recommended: recommended,
         notifications: notifications,
@@ -24,7 +22,6 @@ function save_options() {
 
 function restore_options() {
     chrome.storage.sync.get({
-        homepage: false,
         comments: false,
         recommended: false,
         notifications: false,

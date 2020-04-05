@@ -9,7 +9,7 @@ a{
 /* HOMEPAGE */
 
 .ytd-browse[page-subtype='home']{
-    display: none!important;
+    display: none;
 }
 
 app-drawer#guide{
@@ -315,7 +315,7 @@ ytd-masthead[dark] .ytl-nav-menu{
     visibility: visible;
 }
 
-.ytl-show ~ label{
+.ytl-nav-menu.ytl-show ~ label{
     opacity: 0.7;
 }
 
