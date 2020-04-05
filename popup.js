@@ -9,7 +9,7 @@ function save_options() {
         upload: upload
     }, function(){
         statusInd = document.getElementById("status");
-        statusInd.innerText = 'Options saved.';
+        statusInd.innerText = 'Options saved! Reload for them to take effect';
         setTimeout(function () {
             statusInd.innerText = '';
         }, 750);
