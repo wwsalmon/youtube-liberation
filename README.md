@@ -1,7 +1,7 @@
 ![](icon-256.png)
 
 # YouTube Liberation
-A chrome extension to liberate you from the infinite distraction cycle of YouTube.
+Watch only what you want, not what YouTube endlessly feeds you. A chrome extension to liberate you from the infinite distraction cycle of YouTube.
 
 ## How to use
 

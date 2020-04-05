@@ -23,26 +23,25 @@
 //     });
 // }
 
-// function restore_options() {
-//     // Use default value color = 'red' and likesColor = true.
-//     chrome.storage.sync.get({
-//         homepage: false,
-//         comments: false,
-//         recommended: false,
-//         notifications: false,
-//         messages: false,
-//         upload: false
-//     }, function (items) {
-//         $('#homepage').checked = items.homepage;
-//         $('#comments').checked = items.comments;
-//         $('#recommended').checked = items.recommended;
-//         $('#notifications').checked = items.notifications;
-//         $('#messages').checked = items.messages;
-//         $('#upload').checked = items.upload;
-//     });
-// }
+function restore_options() {
+    chrome.storage.sync.get({
+        homepage: false,
+        comments: false,
+        recommended: false,
+        notifications: false,
+        messages: false,
+        upload: false
+    }, function (items) {
+        document.getElementById('homepage').checked = items.homepage;
+        document.getElementById('comments').checked = items.comments;
+        document.getElementById('recommended').checked = items.recommended;
+        document.getElementById('notifications').checked = items.notifications;
+        document.getElementById('messages').checked = items.messages;
+        document.getElementById('upload').checked = items.upload;
+    });
+}
 
 document.addEventListener('DOMContentLoaded', restore_options);
-$('.options input[type=submit]').on('click',function(){
-    save_options();
-});
+// $('.options input[type=submit]').on('click',function(){
+//     save_options();
+// });
