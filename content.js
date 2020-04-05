@@ -1,17 +1,7 @@
-chrome.storage.sync.get({
-    comments: false,
-    recommended: false,
-    notifications: false,
-    messages: false,
-    upload: false
-}, function (settings) {
+var home = document.querySelector("ytd-browse.ytd-page-manager[page-subtype='home']");
 
-    // HOMEPAGE
-
-    var home = document.querySelector("ytd-browse.ytd-page-manager[page-subtype='home']");
-
-    if (home != null) {
-        home.innerHTML = `<div class='ytl-home'>
+if (home != null) {
+    home.innerHTML = `<div class='ytl-home'>
                 <div class='ytl-home-sidebar'>
                     <div class='ytl-sidebar-logo'><img src='` + chrome.runtime.getURL("icon-256.png") + `'></div>
                     <h3>YouTube Liberation</h3>
@@ -71,8 +61,39 @@ chrome.storage.sync.get({
                     way towards a better YouTube!</p> -->
                 </div>
             </div>`;
+}
+
+chrome.storage.sync.get({
+    comments: false,
+    notifications: false,
+    upload: false
+}, function (settings) {    
+    if (settings.upload){
+        addShow("#buttons ytd-topbar-menu-button-renderer:nth-of-type(1)");
+    }
+    
+    if (settings.notifications){
+        addShow("#buttons ytd-notification-topbar-button-renderer.ytd-masthead");
+    }
+    
+    if (settings.comments){
+        addShow("ytd-comments#comments");
     }
 });
+
+function addShow(selector){
+    item = document.querySelector(selector);
+    if (item != null) {
+        console.log(item);
+        item.className += " ytl-show";
+    }
+    else{
+        document.arrive(selector, function(el){
+            console.log(el);
+            el.className += " ytl-show";
+        })
+    }
+}
 
 var navbar = document.querySelector(".ytd-masthead#container");
 

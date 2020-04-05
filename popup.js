@@ -1,15 +1,11 @@
 function save_options() {
     comments = document.getElementById('comments').checked;
-    recommended = document.getElementById('recommended').checked;
     notifications = document.getElementById('notifications').checked;
-    messages = document.getElementById('messages').checked;
     upload = document.getElementById('upload').checked;
 
     chrome.storage.sync.set({
         comments: comments,
-        recommended: recommended,
         notifications: notifications,
-        messages: messages,
         upload: upload
     }, function(){
         statusInd = document.getElementById("status");
@@ -23,16 +19,11 @@ function save_options() {
 function restore_options() {
     chrome.storage.sync.get({
         comments: false,
-        recommended: false,
         notifications: false,
-        messages: false,
         upload: false
     }, function (items) {
-        document.getElementById('homepage').checked = items.homepage;
         document.getElementById('comments').checked = items.comments;
-        document.getElementById('recommended').checked = items.recommended;
         document.getElementById('notifications').checked = items.notifications;
-        document.getElementById('messages').checked = items.messages;
         document.getElementById('upload').checked = items.upload;
     });
 }

@@ -212,13 +212,7 @@ html[dark='true'] .ytl-home-grid{
     top: 0!important;
 }
 
-
-
-/* .ytp-next-button.ytp-button{
-    display: none!important;
-} */
-
-ytd-comments#comments{
+ytd-comments#comments:not(.ytl-show){
     display: none;
 }
 
@@ -226,11 +220,11 @@ ytd-comments#comments{
 /* TOPBAR */
 /* TOPBAR */
 
-#buttons ytd-topbar-menu-button-renderer:nth-of-type(1), #buttons ytd-topbar-menu-button-renderer.ytd-masthead:nth-of-type(2){
+#buttons ytd-topbar-menu-button-renderer:nth-of-type(1):not(.ytl-show), #buttons ytd-topbar-menu-button-renderer.ytd-masthead:nth-of-type(2):not(.ytl-show){
     display: none!important;
 }
 
-ytd-mini-guide-renderer, yt-icon-button#guide-button, #buttons ytd-notification-topbar-button-renderer.ytd-masthead{
+ytd-mini-guide-renderer, yt-icon-button#guide-button, #buttons ytd-notification-topbar-button-renderer.ytd-masthead:not(.ytl-show){
     display: none!important;
 }
 
