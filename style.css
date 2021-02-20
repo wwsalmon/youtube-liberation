@@ -212,11 +212,13 @@ html[dark='true'] .ytl-home-grid{
     top: 0!important;
 }
 
+.ytp-chapter-hover-container {
+    width: 100%!important;
+}
 
-
-/* .ytp-next-button.ytp-button{
+.ytp-next-button.ytp-button{
     display: none!important;
-} */
+}
 
 ytd-comments#comments{
     display: none;
@@ -235,6 +237,10 @@ ytd-mini-guide-renderer, yt-icon-button#guide-button, #buttons ytd-notification-
 }
 
 ytd-topbar-logo-renderer#logo{
+    display: none!important;
+}
+
+tp-yt-app-drawer {
     display: none!important;
 }
 
