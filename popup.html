@@ -17,7 +17,6 @@
         }
 
         .options-container{
-            display: none;
             background-color: #F32121;
             color: #fff;
         }
@@ -59,7 +58,7 @@
             opacity: 0.6;
         }
 
-        input[type=submit]{
+        input[type=button]{
             background: none;
             border: 1px solid #fff;
             font-family: 'Roboto Mono';
@@ -74,9 +73,15 @@
             letter-spacing: 1px;
         }
 
-        input[type=submit]:hover{
+        input[type=button]:hover{
             background-color: #fff;
             color: #F32121;
+        }
+
+        .status{
+            color: #fff;
+            text-align: center;
+            height: 20px;
         }
 
         </style>
@@ -85,21 +90,18 @@
         <div class='top-container'>
             <img src='icon-256.png' style='width: 48px;'>
             <h1>YouTube Liberation</h1>
-            <p>Free yourself from the chains of YouTube!</p>
+            <p>Watch only what you want, not what is endlessly fed you. Free yourself from the chains of YouTube!</p>
             <p>Extension developed by <a href='https://www.samsonzhang.com/' target="_blank">Samson Zhang</a>. More about this extension on the <a href='https://chrome.google.com/webstore/detail/akmmhbokbfhghenajahbcmogcbghiamg' target="_blank">Chrome Web Store</a> or on <a href='https://github.com/wwsalmon/youtube-liberation' target="_blank">GitHub</a>. </p>
         </div>
         <div class='options-container'>
             <h3>Options</h3>
             <form class='options'>
-                <label for='homepage'><input type='checkbox' id='homepage' name='homepage'></input>Show default homepage</label>
                 <label for='comments'><input type='checkbox' id='comments' name='comments'></input>Show comments on watch page</label>
-                <label for='recommended'><input type='checkbox' id='recommended' name='recommended'></input>Show recommendations on watch page</label>
                 <label for='notifications'><input type='checkbox' id='notifications' name='notifications'></input>Show notifications button</label>
-                <label for='messages'><input type='checkbox' id='messages' name='messages'></input>Show messages button</label>
                 <label for='upload'><input type='checkbox' id='upload' name='upload'></input>Show upload button</label>
-                <input type='submit' value='Save'></input>
+                <input type='button' id='options-save' value='Save'></input>
             </form>
-            <div id='status'></div>
+            <div class='status'><span id='status'></span></div>
         </div>
         <script src='popup.js'></script>
     </body>
