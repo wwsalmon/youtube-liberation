@@ -186,8 +186,10 @@ html[dark='true'] .ytl-home-grid{
 /* WATCH PAGE */
 /* WATCH PAGE */
 
-#primary.ytd-watch-flexy{
-    max-width: 1000px!important;
+@media (min-width: 1000px) {
+    #primary.ytd-watch-flexy{
+        max-width: calc(100% - 474px) !important;
+    }
 }
 
 #primary-inner{
@@ -210,10 +212,6 @@ html[dark='true'] .ytl-home-grid{
 .html5-video-container video{
     left: 0!important;
     top: 0!important;
-}
-
-.ytp-chapter-hover-container {
-    width: 100%!important;
 }
 
 .ytp-next-button.ytp-button{
