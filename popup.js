@@ -2,7 +2,7 @@ function save_options() {
     comments = document.getElementById('comments').checked;
     notifications = document.getElementById('notifications').checked;
     upload = document.getElementById('upload').checked;
-	endscreen = document.getElementById('endscreen').checked;
+    endscreen = document.getElementById('endscreen').checked;
 
     chrome.storage.sync.set({
         comments: comments,
