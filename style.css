@@ -204,15 +204,15 @@ html[dark='true'] .ytl-home-grid{
     width: calc(100% - 24px)!important;
 }
 
-.ytp-iv-video-content, .html5-video-container, .html5-video-container video{
+/* .ytp-iv-video-content, .html5-video-container, .html5-video-container video{
     width: 100%!important;
     height: 100%!important;
-}
+} */
 
-.html5-video-container video{
+/* .html5-video-container video{
     left: 0!important;
     top: 0!important;
-}
+} */
 
 .ytp-next-button.ytp-button{
     display: none!important;
