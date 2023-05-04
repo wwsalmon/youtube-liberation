@@ -196,7 +196,11 @@ html[dark='true'] .ytl-home-grid{
     border-bottom: 0;
 }
 
-#secondary{
+#secondary:not(:has(ytd-playlist-panel-renderer:not([hidden]))){
+    display: none;
+}
+
+div#related {
     display: none;
 }
 
@@ -351,6 +355,6 @@ ytd-masthead[dark] .ytl-nav-item{
 
 /* PLAYLIST PAGE */
 
-ytd-playlist-sidebar-renderer{
+ytd-playlist-sidebar-renderer, ytd-playlist-header-renderer {
     left: 0!important;
 }
