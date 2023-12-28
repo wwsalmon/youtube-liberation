@@ -66,7 +66,8 @@ if (home != null) {
 chrome.storage.sync.get({
     comments: false,
     notifications: false,
-    upload: false
+    upload: false,
+    endscreen: false,
 }, function (settings) {    
     if (settings.upload){
         addShow("#buttons ytd-topbar-menu-button-renderer:nth-of-type(1)");
@@ -78,6 +79,12 @@ chrome.storage.sync.get({
     
     if (settings.comments){
         addShow("ytd-comments#comments");
+    }
+    
+    if (!settings.endscreen) {
+        document.arrive(".ytp-endscreen-content", function (endscreen) {
+            endscreen.style.display = "none"
+        })
     }
 });
 

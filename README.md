@@ -30,6 +30,7 @@ YouTube Liberation works by hiding elements that lead you towards new content yo
 - The entire home page of alg-generated recommendations
 - Video recommendations on watch pages
 - Comments sections on watch pages
+- Endscreen recommendations
 - Extraneous UI elements, replacing the full sidebar with a much more minimal one and removing most topbar buttons
 
 YouTube liberation does not at all compromise:
